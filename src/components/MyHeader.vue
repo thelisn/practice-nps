@@ -102,7 +102,7 @@
       </ul> -->
       <div class="all_menu">
         <a href="#">
-          전체메뉴
+          <p>전체메뉴</p>
           <div class="ham_btn">
             <span></span>
             <span></span>
@@ -335,7 +335,7 @@ export default {
 
       .all_menu {
           position: absolute;
-          right: 0;
+          right: 20px;
           // background-color: pink;
           font-size: 2.2em;
           font-weight: bold;
@@ -347,6 +347,9 @@ export default {
           }
           
           .ham_btn {
+            position: absolute;
+            top: 0;
+            left: 100%;
             display: inline-block;
             width: 20px;
             height: 16px;
@@ -357,7 +360,7 @@ export default {
               display: block;
               width:20px;
               height:2px;
-              margin-bottom: 5px;
+              margin-bottom: 6px;
               background: #6a6a6a;
             }
           }
@@ -368,5 +371,65 @@ export default {
   } // pc_gnb
 
 } // header_wrap
+
+@media screen and (max-width: 1080px) {
+  .header_wrap {
+    // background: pink;
+
+    .top_nav {
+      // background-color: yellow;
+
+      .logo {
+        width: 190px;
+        margin: 0 auto;
+        transform: translateY(-40%);
+        // left: 50%;
+        // transform: translateX(-50%);
+      }
+
+      .search_box,
+      .login,
+      .lang {
+        display: none;
+      }
+
+    } // top_nav
+
+    .pc_gnb {
+      border: none;
+      background-color: green;
+      height: 0;
+
+      .pc_gnb_inner {
+
+        .pc_gnb_list {
+          display: none;
+        }
+
+        .all_menu {
+
+          a {
+
+            p {
+              display: none;
+            }
+
+            .ham_btn {
+              // background-color: pink;
+              margin-top: -65px;
+              margin-left: -15px;
+
+              span {
+                width: 25px;
+                height: 3px;
+                margin-bottom: 7px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 </style>
