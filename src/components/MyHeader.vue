@@ -14,11 +14,11 @@
       <a href="#">전자민원이용(로그인필요)</a>
     </p>
   
-    <div class="lang">
-      <button class="lang_btn">
+    <div class="lang" id="lang">
+      <button class="lang_btn" @click="show = !show">
         Language &#9660;
       </button>
-      <div class="lang_list">
+      <div class="lang_list" v-if="show">
         <ul>
           <li v-for="lang in langs" :key="lang">{{ lang }}</li>
         </ul>
@@ -117,10 +117,14 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
       langs: ['English', '中国', 'Thailand', 'Indonesia', 'Mongolia'],
+
+      show: false, //lang toggle
+
       // pc_gnb: ['정보공개', '전자민원', '소통과 참여', '연금소식', '연금정보', '공단소개'],
       pc_gnb2_1: ['사전정보공표', '정보목록', '정보공개', '공공데이터개방', '자료실', '사업실명제', '공시송달'],
       pc_gnb2_2: ['개인민원', '사업장민원', '국민연금EDI', '웹팩스 수신조회', '지사/직원찾기', '서식 찾기', '인터넷 납부'],
@@ -128,7 +132,6 @@ export default {
       pc_gnb2_4: ['새소식', '보도자료', '채용안내', '제5차 재정계산', '입찰정보', '지사/센터소식', '사옥임대 및 시설개방'],
       pc_gnb2_5: ['알기쉬운 국민연금', '국민연금통계', '세계의연금제도', '사회보장협정', '법령 및 사규(제규정)', '자료실'],
       pc_gnb2_6: ['이사장', '비전 및 전략', '경영진', '연혁 및 CI', '조직 및 인원', '이사회', '경영공시', '공단견학']
-
     }
   }
 }
@@ -306,6 +309,7 @@ export default {
             // height: 700px;
             margin-top: 1px;
             background: whitesmoke;
+            border-radius: 0 0 40px 40px;
 
             &:hover {
               display: block;
