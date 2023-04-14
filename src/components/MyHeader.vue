@@ -309,7 +309,7 @@ export default {
             // height: 700px;
             margin-top: 1px;
             background: whitesmoke;
-            border-radius: 0 0 40px 40px;
+            box-shadow: 2px 5px 10px #ccc;
 
             &:hover {
               display: block;

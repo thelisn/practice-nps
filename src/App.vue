@@ -1,17 +1,17 @@
 <template>
   <div>
 
-    <MyHeader />
+    <MainPage />
 
   </div>
 </template>
 
 <script>
-import MyHeader from './components/MyHeader.vue'
+import MainPage from './components/MainPage.vue'
 
 export default {
   components: {
-    MyHeader
+    MainPage
   }
 }
 
