@@ -124,4 +124,10 @@ export default {
     }
   }
 }
+
+@media screen and (max-width:1600px) {
+  .top_scroll {
+    display: none;
+  }
+}
 </style>

@@ -100,6 +100,7 @@
           </a>
         </li>
       </ul> -->
+
       <div class="all_menu">
         <a href="#">
           <p>전체메뉴</p>
@@ -145,16 +146,16 @@ export default {
     position: relative;
     width: 90%;
     height: 88px;
-    // background-color: salmon;
     margin: 0 auto;
+    // background-color: salmon;
     
     .logo {
       position: relative;
       top: 50%;
       width: 204px;
       height: 48px;
-      // background-color: pink;
       transform: translateY(-50%);
+      // background-color: pink;
       
       img {
         width:100%;
@@ -183,9 +184,9 @@ export default {
         height:16px;
         border: none;
         background: url(@/assets/images/search.svg) no-repeat center/cover;
-        // background-color: seagreen;
         text-indent: -9999px;
         cursor: pointer;
+        // background-color: seagreen;
       }
     } // search_box
 
@@ -197,6 +198,12 @@ export default {
 
       a {
         color: #777;
+
+        &:hover {
+          font-weight: 500;
+          // border-bottom: 1px solid #777;
+          // color: #000;
+        }
       }
     }
 
@@ -214,13 +221,12 @@ export default {
       }
 
       .lang_list {
-        // display: none;
-        // 일단 display: none 해놓음
         background: white;
         font-size: 1.7em;
         color: #777;
         box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
-        // 나중에 토글 기능 추가해야함.
+        // display: none;
+        // 일단 display: none 해놓음
         
         li {
           position:relative;
@@ -234,7 +240,6 @@ export default {
         }
       }
     }
-
   } // top_nav
 
   .pc_gnb {
@@ -247,6 +252,7 @@ export default {
       position: relative;
       width:90%;
       margin: 0 auto;
+      z-index: 99;
 
       .pc_gnb_list {
         display: inline-block;
@@ -306,10 +312,12 @@ export default {
           .pc_gnb_list_depth2 {
             display: none;
             width: calc(90% / 6);
-            // height: 700px;
             margin-top: 1px;
-            background: whitesmoke;
+            border-radius: 20px;
+            background: #fff;
             box-shadow: 2px 5px 10px #ccc;
+            // height: 700px;
+            // background: whitesmoke;
 
             &:hover {
               display: block;
@@ -317,59 +325,55 @@ export default {
             
             a{
               display: block;
-              // width: calc(90% / 6);
+              color:#6a6a6a;
               font-size: 1.9em;
               font-weight: 500;
               line-height: 58px;
               text-align: center;
-              color:#6a6a6a;
+              // width: calc(90% / 6);
 
               &:hover {
                 color: #5b7dbb;
               }
             }
           }
-        } // pc_gnb_item
-
+        }
       } // pc_gnb_list
 
       .all_menu {
+        position: absolute;
+        right: 20px;
+        font-size: 2.2em;
+        font-weight: bold;
+        // background-color: pink;
+        
+        a {
+          position: relative;
+          top: 8px;
+          color: #6a6a6a;
+        }
+        
+        .ham_btn {
+          display: inline-block;
           position: absolute;
-          right: 20px;
+          top: 0;
+          left: 100%;
+          width: 20px;
+          height: 16px;
+          margin-left: 6px;
           // background-color: pink;
-          font-size: 2.2em;
-          font-weight: bold;
-
-          a {
-            position: relative;
-            top: 8px;
-            color: #6a6a6a;
-          }
           
-          .ham_btn {
-            position: absolute;
-            top: 0;
-            left: 100%;
-            display: inline-block;
-            width: 20px;
-            height: 16px;
-            margin-left: 6px;
-            // background-color: pink;
-            
-            span {
-              display: block;
-              width:20px;
-              height:2px;
-              margin-bottom: 6px;
-              background: #6a6a6a;
-            }
+          span {
+            display: block;
+            width:20px;
+            height:2px;
+            margin-bottom: 6px;
+            background: #6a6a6a;
           }
-        } // all_menu
-
-    } // pc_gnb_inner
-
-  } // pc_gnb
-
+        }
+      }
+    }
+  }
 } // header_wrap
 
 @media screen and (max-width: 1080px) {
@@ -392,7 +396,6 @@ export default {
       .lang {
         display: none;
       }
-
     } // top_nav
 
     .pc_gnb {
@@ -415,10 +418,10 @@ export default {
             }
 
             .ham_btn {
-              // background-color: pink;
               margin-top: -65px;
               margin-left: -15px;
-
+              // background-color: pink;
+              
               span {
                 width: 25px;
                 height: 3px;
