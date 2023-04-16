@@ -1,27 +1,28 @@
 <template>
 <div class="service_wrap">
   
-  <div class="personal_service_wrap active">
+  <div class="personal_service_wrap" :class="{active: true}">
     <h2>개인 서비스</h2>
     <a href="#">
       <div class="personal_service_box" v-for="personal in personal" :key="personal">
         <p v-html="personal"></p>
       </div>
-      <div class="personal_btn">
+      <button class="personal_btn"
+      @click="active = !active">
         <p>&rarr;</p>
-      </div>
+      </button>
     </a>
   </div>
   
-  <div class="business_service_wrap active">
+  <div class="business_service_wrap" :class="{active: true}">
     <h2>사업장 서비스</h2>
     <a href="#">
       <div class="business_service_box" v-for="business in business" :key="business">
         <p v-html="business"></p>
       </div>
-      <div class="business_btn">
+      <button class="business_btn" @click="active = !active">
         <p>&larr;</p>
-      </div>
+      </button>
     </a>
   </div>
     
@@ -32,6 +33,9 @@
 export default {
   data() {
     return {
+
+      active: false,
+
       personal: ['가입증명서<br>발급', '가입내역<br>조회', '보험료<br>결정내역 조회', '연금산정용가입<br>내역확인서 발급', '연금 / 일시금<br>청구', '전화번호 /<br>이메일 변경'],
       business: ['국민연금 EDI', '보험료 부과내역<br>증명서 발급', '사업장 가입자<br>증명서 발급', '사업장 보험료<br>지원내역 조회', '사업장 관리번호<br>조회', '사업장 가입자<br>명부 조회']
     }
@@ -45,11 +49,12 @@ export default {
   position: absolute;
   top: 560px;
   left: 50%;
-  width: 96%;
+  width: 1100px;
   height: 220px;
   transform: translateX(-50%);
   // top: 50%;
   // background: pink;
+  // margin:0 auto;
   
   .personal_service_wrap {
     width: 78%;
@@ -135,9 +140,9 @@ export default {
         
         p {
           margin-left: 6px;
-          padding: 28px;
+          // padding: 28px;
           color: #158799;
-          font-size: 3em;
+          font-size: 2em;
           // background-color: yellow;
         }
       }
@@ -174,14 +179,14 @@ export default {
         width: 80px;
         height: 80px;
         border-radius: 40px;
-        background: #ffd4b4;
+        background: #ffe5d1;
         transform: translateY(-50%);
         // background-color: yellow;
         
         p {
           color: #d66000;
-          font-size: 3em;
-          padding: 28px;
+          font-size: 2em;
+          // padding: 1px;
           margin-left: -6px;
         }
       }
@@ -245,7 +250,7 @@ export default {
   }
 }
 
-@media screen and (max-width:1080px) {
+@media screen and (max-width:1200px) {
   .service_wrap {
     display: none;
   }

@@ -376,7 +376,7 @@ export default {
   }
 } // header_wrap
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1200px) {
   .header_wrap {
     // background: pink;
 
