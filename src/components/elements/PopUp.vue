@@ -125,4 +125,37 @@ export default {
     }
   }
 }
+
+@media screen and (max-width:1200px) {
+  .wrap {
+    width: 100%;transform: translateY(300px);
+    // background: pink;
+
+    .popup_wrap {
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+      
+      .popup_cont {
+
+        a {
+
+          .box {
+
+            .title {
+              font-size: 2.6em;
+              padding: 30px;
+            }
+
+            .desc {
+              font-size: 1.8em;
+              line-height: 25px;
+              margin-left: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>

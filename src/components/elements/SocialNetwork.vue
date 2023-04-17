@@ -186,6 +186,26 @@ export default {
 
       .sns_innerwrap {
 
+        .sns_cont {
+
+          a {
+
+            .box {
+
+              .text {
+
+                .title {
+                  font-size: 3em;
+                  margin-bottom: 12px;
+                }
+
+                .desc {
+                  font-size: 2em;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
