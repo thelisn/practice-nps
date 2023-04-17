@@ -74,8 +74,8 @@ export default {
   position: relative;
   width: 1100px;
   margin: 0 auto;
-  background: pink;
   // top: 400px;
+  // background: pink;
 
   .easy_wrap {
     position: absolute;
@@ -161,7 +161,7 @@ export default {
 @media screen and (max-width:1200px) {
   .wrap {
     width: 900px;
-    background: pink;
+    // background: pink;
 
     .easy_wrap {
       width: 430px;
@@ -190,6 +190,52 @@ export default {
 
             p {
               margin-top: 28px;
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:950px) {
+  .wrap {
+    top: 450px;
+    width: 100%;
+    // position: relative;
+    // background: pink;
+
+    .easy_wrap {
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+      // background: yellow;
+
+      .easy_innerwrap {
+
+        .easy_cont {
+          width: 90%;
+
+          .box {
+            width: 26%;
+            margin-right: 11%;
+
+            .img_box {
+              width: 52px;
+              height: 52px;
+              border-radius: 26px;
+
+              .img {
+
+                img {
+                  width: 52px;
+                }
+              }
+            }
+
+            p {
+              margin-top: 22px;
               font-size: 1.5em;
             }
           }

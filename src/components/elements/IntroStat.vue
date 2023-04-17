@@ -205,4 +205,49 @@ export default {
     }
   }
 }
+
+@media screen and (max-width:950px) {
+  .wrap {
+    width: 100%;
+    // background: pink;
+
+    .intro_wrap {
+      width: 90%;
+      margin: 0 auto;
+      // background-color: yellow;
+
+      .intro_innerwrap {
+
+        .intro_cont {
+          width: 90%;
+          // background-color: gray;
+          
+          .box {
+            width: 26%;
+            margin-right: 11%;
+            // background: pink;
+
+            .img_box {
+              width: 52px;
+              height: 52px;
+              border-radius: 26px;
+
+              .img {
+                
+                img {
+                  width: 52px;
+                }
+              }
+            }
+
+            p {
+              margin-top: 22px;
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>

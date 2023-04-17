@@ -9,8 +9,11 @@
     <MainBanner />
     <OftenService />
     <PersonalService />
+    <PopUp />
+    <SocialNetwork />
     <IntroStat />
     <EasyKnow />
+    <PuzzleBox />
     
   </div>
 </template>
@@ -21,8 +24,11 @@ import TopScroll from './elements/TopScroll.vue';
 import MainBanner from './elements/MainBanner.vue';
 import OftenService from './elements/OftenService.vue';
 import PersonalService from './elements/PersonalService.vue';
+import PopUp from './elements/PopUp.vue';
+import SocialNetwork from './elements/SocialNetwork.vue';
 import IntroStat from './elements/IntroStat.vue';
 import EasyKnow from './elements/EasyKnow.vue';
+import PuzzleBox from './elements/PuzzleBox.vue';
 
 export default {
   components: {
@@ -31,9 +37,12 @@ export default {
     MainBanner,
     OftenService,
     PersonalService,
+    PopUp,
+    SocialNetwork,
     IntroStat,
-    EasyKnow
-}
+    EasyKnow,
+    PuzzleBox
+  }
 }
 
 </script>
