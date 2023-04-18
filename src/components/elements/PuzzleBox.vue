@@ -41,15 +41,17 @@ export default {
 
 <style scoped lang="scss">
 .wrap {
-  position: relative;
-  top: 440px;
+  // position: relative;
+  // top: 440px;
   width: 1100px;
   height: 300px;
   margin: 0 auto;
+  margin-top: 30px;
   // background: pink;
   // margin-bottom: 100px;
 
   .cont {
+    // margin-top: 30px;
     float: left;
     width: calc(100% / 3 - 30px);
     height: 100%;
@@ -101,19 +103,19 @@ export default {
   }
 
   .circle_green {
-    position: absolute;
+    position: relative;
     top: 130px;
     left: 265px;
     width: 150px;
     height: 150px;
     border: 20px solid #fff;
     border-radius: 100px;
-    background: #75d191;
+    background: linear-gradient(145deg, #65d587 40%, #7fe59d)
   }
 
   .circle_red {
-    position: absolute;
-    top:30px;
+    position: relative;
+    top:-120px;
     left: 685px;
     width: 150px;
     height: 150px;
@@ -126,6 +128,7 @@ export default {
 @media screen and (max-width:1200px) {
   .wrap {
     width: 900px;
+    top: 600px;
 
     .cont {
 
@@ -156,7 +159,7 @@ export default {
   .wrap {
     width: 100%;
     height: 405px;
-    margin-top: 60px;
+    margin-top: 50px;
     // background: pink;
 
     .cont {

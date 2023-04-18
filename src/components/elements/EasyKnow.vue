@@ -79,6 +79,7 @@ export default {
 
   .easy_wrap {
     position: absolute;
+    top: -400px;
     right: 0;
     width: 525px;
     height: 400px;
@@ -161,6 +162,7 @@ export default {
 @media screen and (max-width:1200px) {
   .wrap {
     width: 900px;
+    top: 150px;
     // background: pink;
 
     .easy_wrap {
@@ -201,7 +203,7 @@ export default {
 
 @media screen and (max-width:950px) {
   .wrap {
-    top: 450px;
+    top: 600px;
     width: 100%;
     // position: relative;
     // background: pink;

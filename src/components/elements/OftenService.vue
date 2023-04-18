@@ -3,13 +3,15 @@
     <div class="service_wrap">
       <h2>자주 찾는 서비스</h2>
       <a href="#">
-        <div class="box" v-for="cont in service_box" :key="cont">
-          <p class="title">
-            {{ cont.title }}
-          </p>
-          <div class="img_box">
-            <div class="img">
-              <img :src="cont.img" alt="아이콘">
+        <div class="box_wrap">
+          <div class="box" v-for="cont in service_box" :key="cont">
+            <p class="title">
+              {{ cont.title }}
+            </p>
+            <div class="img_box">
+              <div class="img">
+                <img :src="cont.img" alt="아이콘">
+              </div>
             </div>
           </div>
         </div>
@@ -46,13 +48,14 @@ export default {
   
   .service_wrap {
     position: relative;
-    // z-index: -99;
     margin-top: 30px;
-    left: 600px;
+    // margin-right: 0px;
+    margin-left: 600px;
     width: 500px;
     height: 350px;
     border-radius: 30px;
     background: whitesmoke;
+    // z-index: -99;
     // margin-left: 30px;
     
     h2 {
@@ -64,6 +67,7 @@ export default {
     
     a {
       display: inline-block;
+      width: 480px;
       margin-left: 20px;
       // background: pink;
       
@@ -134,9 +138,11 @@ export default {
     width: 100%;
     
     .service_wrap {
+      top: 400px;
       left: 0;
       width: 100%;
       height: 400px;
+      margin-left: 0px;
       border-radius: 0px;
       // margin-left: 0px;
       
@@ -145,18 +151,38 @@ export default {
       }
 
       a {
-        margin-left: 3%;
         width: 100%;
+        margin-left: 0px;
+        // width: 830px;
+        // margin-left: 3%;
         
-        .box {
-          width: 30%;
-          height: 100px;
-          margin-right: 2%;
-        }
+        .box_wrap {
+          position: absolute;
+          width: 94%;
+          margin-left: 3%;
+          // background: green;
+          .box {
+            position: relative;
+            width: 32%;
+            height: 100px;
+            margin-right: 2%;
+          }
+
+          .box:nth-child(4),
+          .box:nth-child(8) {
+            margin-right: 0px;
+          }
       
-        .box:nth-child(3),
-        .box:nth-child(6) {
-          display: none;
+          .box:nth-child(3),
+          .box:nth-child(6) {
+            display: none;
+          }
+
+          .box:nth-child(5),
+          .box:nth-child(7),
+          .box:nth-child(8) {
+            margin-bottom: 0px;
+          }
         }
       }
     }

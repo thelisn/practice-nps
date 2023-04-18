@@ -51,17 +51,21 @@ export default {
 
 <style scoped lang="scss">
 .wrap {
+  position: relative;
   width: 1100px;
   height: 250px;
   // background: pink;
   margin: 0 auto;
-  transform: translateY(600px);
+  // top: 600px;
+  // z-index: 1;
 
   .popup_wrap {
     width: 570px;
     height: 100%;
-    position: absolute;
-    left: 0;
+    margin-top: 600px;
+    // position: absolute;
+    // left: 0;
+
     // background: yellow;
 
     h2 {
@@ -75,7 +79,7 @@ export default {
 
         .box  {
           position: absolute;
-          width: 100%;
+          width: 570px;
           height: 200px;
           // background: pink;
           border-radius: 30px;
@@ -128,7 +132,9 @@ export default {
 
 @media screen and (max-width:1200px) {
   .wrap {
-    width: 100%;transform: translateY(300px);
+    width: 100%;
+    top: 450px;
+    // transform: translateY(450px);
     // background: pink;
 
     .popup_wrap {
@@ -141,6 +147,7 @@ export default {
         a {
 
           .box {
+            width: 100%;
 
             .title {
               font-size: 2.6em;

@@ -14,6 +14,9 @@
     <IntroStat />
     <EasyKnow />
     <PuzzleBox />
+    <BotFirst />
+    <BotSecond />
+    <BotThird />
     
   </div>
 </template>
@@ -29,6 +32,9 @@ import SocialNetwork from './elements/SocialNetwork.vue';
 import IntroStat from './elements/IntroStat.vue';
 import EasyKnow from './elements/EasyKnow.vue';
 import PuzzleBox from './elements/PuzzleBox.vue';
+import BotFirst from './elements/BotFirst.vue';
+import BotSecond from './elements/BotSecond.vue';
+import BotThird from './elements/BotThird.vue';
 
 export default {
   components: {
@@ -41,7 +47,10 @@ export default {
     SocialNetwork,
     IntroStat,
     EasyKnow,
-    PuzzleBox
+    PuzzleBox,
+    BotFirst,
+    BotSecond,
+    BotThird
   }
 }
 

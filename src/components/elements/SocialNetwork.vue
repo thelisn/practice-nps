@@ -79,21 +79,25 @@ export default {
 
 <style scoped lang="scss">
 .wrap {
+  position: relative;
   width: 1100px;
-  height: 250px;
+  // height: 250px;
   margin: 0 auto;
   // background: cornflowerblue;
-  transform: translateY(350px);
+  // transform: translateY(350px);
   
   .sns_wrap {
     position: absolute;
     right: 0;
     width: 500px;
     height: 100%;
+    // margin-top: -250px;
+    // top: 350px;
     // height: 250px;
     // background: yellow;
 
     h2 {
+      transform: translateY(-250px);
       font-size: 2.6em;
       font-weight: bold;
       // color: #000;
@@ -177,12 +181,20 @@ export default {
 @media screen and (max-width:1200px) {
   .wrap {
     width: 100%;
+    height: 250px;
     // background: pink;
+    // position: relative;
+    top: 500px;
 
     .sns_wrap {
       position: relative;
       width: 90%;
       margin: 0 auto;
+      top: 0px;
+
+      h2 {
+        transform: translateY(0px);
+      }
 
       .sns_innerwrap {
 

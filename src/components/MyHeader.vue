@@ -257,41 +257,51 @@ export default {
       .pc_gnb_list {
         display: inline-block;
         width: 100%;
-        margin-right: 100px;
+        margin-left: 5%;
+        // margin-right: 100px;
 
         >li {
           position: absolute;
           top: 0px;
-          width:100%;
+          width:700px;
           height: 58px;
           // background-color: cornflowerblue;
         }
 
         >li:nth-child(2) {
-          margin-left: calc(90% / 6);
+          margin-left: 15%;
+          // width: 500px;
+          // margin-left: calc(90% / 6);
         }
 
         >li:nth-child(3) {
-          margin-left: calc(90% / 3);
+          margin-left: 30%;
+          // margin-left: calc(90% / 3);
         }
 
         >li:nth-child(4) {
-          margin-left: calc(90% / 2);
+          margin-left: 45%;
+          // margin-left: calc(90% / 2);
         }
 
         >li:nth-child(5) {
-          margin-left: calc(90% / 1.5);
+          margin-left: 60%;
+          // margin-left: calc(90% / 1.5);
         }
 
         >li:nth-child(6) {
-          margin-left: calc(90% / 1.2);
+          margin-left: 75%;
+          // margin-left: calc(90% / 1.2);
         }
         
         .pc_gnb_item {
+          // width: 20%;
+          width: 100px;
+          // background-color: yellow;
           
           >a {
             display: inline-block;
-            width: calc(90% / 6);
+            // width: calc(90% / 6);
             font-size: 2.2em;
             color: #6a6a6a;
             font-weight: bold;
@@ -311,7 +321,9 @@ export default {
 
           .pc_gnb_list_depth2 {
             display: none;
-            width: calc(90% / 6);
+            width: calc(180px);
+            // margin: 0 auto;
+            transform: translateX(-50px);
             margin-top: 1px;
             border-radius: 20px;
             background: #fff;
