@@ -41,23 +41,23 @@ export default {
 
 <style scoped lang="scss">
 .wrap {
-  // position: relative;
-  // top: 440px;
   width: 1100px;
   height: 300px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 60px;
+  // position: relative;
+  // top: 440px;
   // background: pink;
   // margin-bottom: 100px;
 
   .cont {
-    // margin-top: 30px;
     float: left;
     width: calc(100% / 3 - 30px);
     height: 100%;
     margin-right: 45px;
     border-radius: 30px;
     // display: inline-block;
+    // margin-top: 30px;
     // background: green;
 
     .title {

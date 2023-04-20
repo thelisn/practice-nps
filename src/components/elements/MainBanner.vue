@@ -61,10 +61,10 @@ export default {
     height: 350px;
     margin-top: 30px;
     border-radius: 30px;
-    background: #ccc;
     overflow: hidden;
     // display: inline-block;
     // opacity: .2;
+    // background: #ccc;
     // box-shadow: 0px 0px 8px #ccc;
     
     .title {
@@ -118,6 +118,17 @@ export default {
 
   .mainbanner:nth-child(4) {
     background: #d9f0eb;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .wrap {
+    width: 90%;
+    background: pink;
+
+    .mainbanner {
+      width: 90%
+    }
   }
 }
 </style>

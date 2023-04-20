@@ -11,7 +11,7 @@
     </div>
   
     <p class="login">
-      <a href="#">전자민원이용(로그인필요)</a>
+      <a href="../components/MyHistory.vue">전자민원이용(로그인필요)</a>
     </p>
   
     <div class="lang" id="lang">

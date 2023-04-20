@@ -54,18 +54,17 @@ export default {
   position: relative;
   width: 1100px;
   height: 250px;
-  // background: pink;
   margin: 0 auto;
   // top: 600px;
   // z-index: 1;
+  // background: pink;
 
   .popup_wrap {
     width: 570px;
     height: 100%;
-    margin-top: 600px;
+    margin-top: 350px;
     // position: absolute;
     // left: 0;
-
     // background: yellow;
 
     h2 {
@@ -79,26 +78,26 @@ export default {
 
         .box  {
           position: absolute;
+          bottom: 0;
           width: 570px;
           height: 200px;
-          // background: pink;
           border-radius: 30px;
-          bottom: 0;
+          // background: pink;
           // opacity: .4;
 
           .title {
+            padding: 34px;
             color: #6a6a6a;
             font-size: 3em;
             font-weight: bold;
-            padding: 34px;
             line-height: 32px;
           }
 
           .desc {
+            margin-left: 34px;
             color: #6a6a6a;
             font-size: 1.6em;
             line-height: 26px;
-            margin-left: 34px;
           }
         }
 
@@ -133,7 +132,7 @@ export default {
 @media screen and (max-width:1200px) {
   .wrap {
     width: 100%;
-    top: 450px;
+    top: 500px;
     // transform: translateY(450px);
     // background: pink;
 
@@ -150,14 +149,14 @@ export default {
             width: 100%;
 
             .title {
-              font-size: 2.6em;
               padding: 30px;
+              font-size: 2.6em;
             }
 
             .desc {
+              margin-left: 30px;
               font-size: 1.8em;
               line-height: 25px;
-              margin-left: 30px;
             }
           }
         }

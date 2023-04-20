@@ -9,6 +9,7 @@
     <MainBanner />
     <OftenService />
     <PersonalService />
+    <NewNews />
     <PopUp />
     <SocialNetwork />
     <IntroStat />
@@ -17,6 +18,9 @@
     <BotFirst />
     <BotSecond />
     <BotThird />
+    <br>
+    <br>
+    <!-- <MyHistory /> -->
     
   </div>
 </template>
@@ -27,6 +31,7 @@ import TopScroll from './elements/TopScroll.vue';
 import MainBanner from './elements/MainBanner.vue';
 import OftenService from './elements/OftenService.vue';
 import PersonalService from './elements/PersonalService.vue';
+import NewNews from './elements/NewNews.vue';
 import PopUp from './elements/PopUp.vue';
 import SocialNetwork from './elements/SocialNetwork.vue';
 import IntroStat from './elements/IntroStat.vue';
@@ -35,6 +40,7 @@ import PuzzleBox from './elements/PuzzleBox.vue';
 import BotFirst from './elements/BotFirst.vue';
 import BotSecond from './elements/BotSecond.vue';
 import BotThird from './elements/BotThird.vue';
+// import MyHistory from './MyHistory.vue';
 
 export default {
   components: {
@@ -43,6 +49,7 @@ export default {
     MainBanner,
     OftenService,
     PersonalService,
+    NewNews,
     PopUp,
     SocialNetwork,
     IntroStat,
@@ -50,7 +57,8 @@ export default {
     PuzzleBox,
     BotFirst,
     BotSecond,
-    BotThird
+    BotThird,
+    // MyHistory
   }
 }
 

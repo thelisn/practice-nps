@@ -71,20 +71,20 @@ export default {
 
 <style scoped lang="scss">
 .wrap {
-  // position: relative;
-  // top: 400px;
   width: 1100px;
   margin: 0 auto;
+  // position: relative;
+  // top: 400px;
   // height: 1000px;
   // background: pink;
 
   .intro_wrap {
     width: 525px;
     height: 400px;
-    margin-top: 30px;
-    // background: whitesmoke;
+    margin-top: 60px;
     // position: relative;
     // top: 400px;
+    // background: whitesmoke;
 
     h2 {
       color: #6992dd;
@@ -168,7 +168,8 @@ export default {
 @media screen and (max-width:1200px) {
   .wrap {
     width: 900px;
-    top: 550px;
+    margin-top: 600px;
+    // top: 900px;
     // background: pink;
 
     .intro_wrap {

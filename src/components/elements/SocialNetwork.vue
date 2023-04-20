@@ -81,8 +81,8 @@ export default {
 .wrap {
   position: relative;
   width: 1100px;
-  // height: 250px;
   margin: 0 auto;
+  // height: 250px;
   // background: cornflowerblue;
   // transform: translateY(350px);
   
@@ -97,9 +97,9 @@ export default {
     // background: yellow;
 
     h2 {
-      transform: translateY(-250px);
       font-size: 2.6em;
       font-weight: bold;
+      transform: translateY(-250px);
       // color: #000;
     }
 
@@ -120,17 +120,17 @@ export default {
 
           .box {
             position: absolute;
+            bottom: 0;
             width: 100%;
             height: 200px;
             border-radius: 30px;
-            bottom: 0;
             // opacity: .2;
 
             img {
               position: absolute;
               top: 50%;
-              transform: translateY(-50%);
               left: 20px;
+              transform: translateY(-50%);
               // background: pink;
             }
 
@@ -146,9 +146,9 @@ export default {
               }
 
               .title {
+                margin-bottom: 15px;
                 font-size: 3.4em;
                 font-weight: 600;
-                margin-bottom: 15px;
               }
 
               .desc {
@@ -180,17 +180,17 @@ export default {
 
 @media screen and (max-width:1200px) {
   .wrap {
+    top: 550px;
     width: 100%;
     height: 250px;
-    // background: pink;
     // position: relative;
-    top: 500px;
+    // background: pink;
 
     .sns_wrap {
       position: relative;
+      top: 0px;
       width: 90%;
       margin: 0 auto;
-      top: 0px;
 
       h2 {
         transform: translateY(0px);
@@ -207,8 +207,8 @@ export default {
               .text {
 
                 .title {
-                  font-size: 3em;
                   margin-bottom: 12px;
+                  font-size: 3em;
                 }
 
                 .desc {
