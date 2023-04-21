@@ -1,30 +1,39 @@
 <template>
   <div class="wrap">
     <div class="listbtn_wrap">
-      <ul class="listbtn" v-for="list in list" :key="list">
-        <a href="#">
-          <li class="li_1">{{ list.listBtn[0] }}</li>
-        </a>
-        <a href="#">
-          <li class="li_2">{{ list.listBtn[1] }}</li>
-        </a>
-        <a href="#">
-          <li class="li_3">{{ list.listBtn[2] }}</li>
-        </a>
-        <a href="#">
-          <li class="li_4">{{ list.listBtn[3] }}</li>
+      <ul class="listbtn">
+        <a href="#" onclick="return false">
+          <li v-for="list in list" :key="list">{{ list.listCategory }}</li>
         </a>
       </ul>
     </div>
 
-    <div class="newlist_wrap">
-      <div class="newlist_cont" v-for="list in list" :key="list">
-        <p>{{ list.newList[0] }}</p>
-        <p>{{ list.newDate[0] }}</p>
+    <div class="cont_wrap">
+      <a href="#">
+      <div 
+        class="cont" 
+        :v-for="(contIndex, cont) in list" 
+        :key="`contIndex-${contIndex}`"
+      >
+        <div 
+          class="data-repeat" 
+          :v-for="(contDataIndex, contData) in cont.data" 
+          :key="`contDataIndex-${contDataIndex}`"
+        >
+          <h3 class="title">{{ contData.title }}</h3>
+          <p 
+            v-if="contData.newCheck === true"
+            class="newCheck" 
+          >
+            NEW
+          </p>
+          <p class="date">{{ contData.date }}</p>
+        </div>
       </div>
+      </a>
     </div>
-    
-  </div>
+
+  </div> <!-- wrap -->
 </template>
 
 <script>
@@ -33,16 +42,120 @@ export default {
     return {
       list: [
         {
-          listBtn: ['새소식', '보도자료', '채용공고', '입찰공고'],
-          newList: ['스미싱 사기 주의 안내', '2023년도 국민연금 기준소득월액 상,하한액 조정 안내', '2022년 우수 국민제안 심사위원회 결과 안내', '2023년 2분기 노후긴급자금 대부(실버론) 이자율 및 연체이자...', '2022년 제1차 국민연금 토론방 토론우수자 선정 및 기념품 당...'],
-          newDate: ['2023-04-12', '2023-04-05', '2023-03-24', '2023-03-21', '2023-02-27'],
-          broadList: ['[보도자료] 국민연금, 한국은행 350억달러 외환 스왑 한도 합의', '[보도해명자료] 4월 10일자 SBS BIZ 주식거래금지 관련', '[보도참고자료] 국민연금공단, 투명한 정보 공개로 우수공시기관...', '[보도자료] 국민연금 납부예외자는 "지역가입자 보험료지원" 신청하...', '[보조설명자료] 3월 28일자 이투데이 기사 관련'],
-          broadDate: ['2023-04-13', '2023-04-10', '2023-04-07', '2023-04-05', '2023-03-28'],
-          hireList: ['국민연금공단 공무직(사서직) 및 기간제 근로자(기록연구직, 고객...', '[국민연금공단 대구지역본부] 공무직(환경관리직) 공개 채용', '[국민연금공단 경인지역본부] 공무직(시설직) 공개 채용', '[국민연금공단 대전세종지역본부] 공무직(환경관리직, 시설직) 공개...', '[국민연금공단 부산지역본부] 공무직(시설직) 공개채용 공고'],
-          hireDate: ['2023-04-12', '2023-04-10', '2023-04-10', '2023-04-06', '2023-04-06'],
-          bidList: ['2023년 청풍리조트 사업장 생활계폐기물 처리 용역 단가 계약', '공익형 사옥 건립 타당성 조사 연구용역', '통계 소프트웨어 갱신(SAS)', '국민연금공단 서울남부지역본부 불용차량 매각 재공고', '2023년도 청풍리조트 전기안전관리자 위탁상주 용역 계약 공고'],
-          bidDate: ['2023-04-17', '2023-04-13', '2023-04-12', '2023-04-11', '2023-04-11']
-        }
+          listCategory: '새소식',
+          data: [
+            {
+              title: '국민연금공단 세종사옥 신규 임대 안내',
+              date: '2023-04-20',
+              newCheck: true,
+            },
+            {
+              title: '국민연금공단 사칭 문자(스미싱) 주의 안내',
+              date: '2023-04-12',
+              newCheck: false,
+            },
+            {
+              title: '2023년도 국민연금 기준소득월액 상/하한액 조정 안내',
+              date: '2023-04-05',
+              newCheck: false,
+            },
+            {
+              title: '2022년 우수 국민제안 심사위원회 결과 안내',
+              date: '2023-03-24',
+              newCheck: false,
+            },
+            {
+              title: '2022년 제1차 국민연금 토론방 토론우수자 선정 및 기념품 당...',
+              date: '2023-02-27',
+              newCheck: false,
+            }
+          ],
+        }, // 새소식
+
+        {
+          listCategory: '보도자료',
+          data: [{
+            title: '[보도자료] 국민연금, 동반성장 평가 2년 연속 "최우수" 등급...',
+            date: '2023-04-21',
+            newCheck: true,
+          },
+          {
+            title: '[보도자료] 국민연금공단, "공공데이터 제공 운영실태 평가" 4...',
+            date: '2023-04-20',
+            newCheck: true,
+          },
+          {
+            title: '[보도자료] BNY멜론 자산운용그룹, 전주사무소 개소...국민연금...',
+            date: '2023-04-19',
+            newCheck: true,
+          },
+          {
+            title: '[보도자료] 국민연금/한국은행 350억달러 외환 스왑 한도 합의',
+            date: '2023-04-13'
+          }
+          ]
+        }, // 보도자료
+
+        {
+          listCategory: '채용공고',
+          data: [{
+            title: '국민연금공단 공무직(사서직) 및 기간제 근로자(기록연구직, 고객...',
+            date: '2023-04-12',
+            newCheck: false,
+          },
+          {
+            title: '[국민연금공단 대구지역본부] 공무직(환경관리직) 공개 채용',
+            date: '2023-04-10',
+            newCheck: false,
+          },
+          {
+            title: '[국민연금공단 경인지역본부] 공무직(시설직) 공개채용',
+            date: '2023-04-10',
+            newCheck: false,
+          },
+          {
+            title: '[국민연금공단 대전세종지역본부] 공무직(환경관리직, 시설직) 공개...',
+            date: '2023-04-06',
+            newCheck: false,
+          },
+          {
+            title: '[국민연금공단 부산지역본부] 공무직(시설직) 공개채용 공고',
+            date: '2023-04-06',
+            newCheck: false,
+          }
+          ]
+        }, // 채용공고
+
+        {
+          listCategory: '입찰공고',
+          data: [
+            {
+              title: '2023년도 청풍리조트 전기안전관리자 위탁성주 용역 계약(재공고...',
+              date: '2023-04-20',
+              newCheck: true,
+            },
+            {
+              title: '2023년 청풍리조트 사업장 생활계폐기물 처리 용역 단가 계약',
+              date: '2023-04-17',
+              newCheck: false,
+            },
+            {
+              title: '공익형 사옥 건립 타당성 조사 연구용역',
+              date: '2023-04-13',
+              newCheck: false,
+            },
+            {
+              title: '통계 소프트웨어 갱신(SAS)',
+              date: '2023-04-12',
+              newCheck: false,
+            },
+            {
+              title: '국민연금공단 서울남부지역본부 불용차량 매각 재공고',
+              date: '2023-04-11',
+              newCheck: false,
+            }
+          ]
+        }, // 입찰공고
       ]
     }
   }
@@ -55,7 +168,7 @@ export default {
   top: 300px;
   // background: pink;
   width: 1100px;
-  height: 300px;
+  height: 220px;
   margin: 0 auto;
 
   .listbtn_wrap {
@@ -65,52 +178,50 @@ export default {
     background: #eee;
 
     .listbtn {
+
       // width: 100px;
       // height: 100px;
       // background-color: ivory;
-
+      // display: inline-block;
       a {
-        
         li {
           display: inline-block;
           width: 100px;
           height: 50px;
           border-radius: 25px;
-          font-size: 1.6em;
-          font-family: 'NanumBarunGothic';
+          font-size: 1.6em; // font-family: 'NanumBarunGothic';
           text-align: center;
           line-height: 55px;
           cursor: pointer;
-          transition: .2s;
-          // margin-right: 20px;
+          transition: .2s; // margin-right: 20px;
+
           // background-color: yellow;
-          
           &:hover {
             color: #fff;
           }
         }
 
-        .li_1 {
+        li:nth-child(1) {
           &:hover {
             background: #ef681e;
           }
         }
 
-        .li_2 {
+        li:nth-child(2) {
           &:hover {
             background: #6992dd;
           }
         }
 
-        .li_3 {
+        li:nth-child(3) {
           &:hover {
             background: #20aa20;
           }
         }
 
-        .li_4 {
+        li:nth-child(4) {
           &:hover {
-          background: #ea558b;
+            background: #ea558b;
           }
         }
 
@@ -119,17 +230,57 @@ export default {
         }
       }
     }
-  }
+  } // listbtn_wrap
 
-  .newlist_wrap {
-    // background-color: beige;
-    // width: 200px;
-    // height: 100px;
+  .cont_wrap {
+    margin-top: 20px;
+    width: 100%;
+    // background: #ddd;
+    height: 150px;
+    overflow: hidden;
 
-    .newlist_cont {
-      width: calc(90% / 3);
-      height: 200px;
-      // background: yellow;
+    .cont {
+      border-radius: 20px;
+      border: 1px solid #000;
+      background: #eee;
+      // display: inline-block;
+      float: left;
+      width: calc(100% / 3 - 20px);
+      height: 100%;
+      // background: beige;
+      margin-right: 30px;
+      position: relative;
+
+      h3 {
+        font-size: 2em;
+        font-weight: bold;
+        width: 220px;
+        height: 90px;
+        padding: 20px;
+        display: inline-block;
+        // background: yellow;
+      }
+
+      .newCheck {
+        font-size: 2em;
+        font-weight: bold;
+        position: absolute;
+        padding: 20px;
+        right: 0;
+        display: inline-block;
+        // background-color: #20aa20;
+      }
+
+      .date {
+        font-size: 1.6em;
+        margin-top: 2px;
+        padding: 20px;
+        // background: palegreen;
+      }
+    }
+
+    .cont:nth-child(3) {
+      margin-right: 0px;
     }
   }
 }

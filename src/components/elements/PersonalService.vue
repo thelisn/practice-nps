@@ -1,26 +1,26 @@
 <template>
 <div class="service_wrap">
   
-  <div class="personal_service_wrap" :class="{active: true}">
+  <div class="personal_service_wrap" :class="{active: isActive}">
     <h2>개인 서비스</h2>
-    <a href="#">
+    <a href="#" onclick="return false">
       <div class="personal_service_box" v-for="personal in personal" :key="personal">
         <p v-html="personal"></p>
       </div>
       <button class="personal_btn"
-      @click="active = !active">
+      @click="activate">
         <p>&rarr;</p>
       </button>
     </a>
   </div>
   
-  <div class="business_service_wrap" :class="{active: true}">
+  <div class="business_service_wrap" :class="{active: isActive}">
     <h2>사업장 서비스</h2>
-    <a href="#">
+    <a href="#" onclick="return false">
       <div class="business_service_box" v-for="business in business" :key="business">
         <p v-html="business"></p>
       </div>
-      <button class="business_btn" @click="active = !active">
+      <button class="business_btn" @click="activate">
         <p>&larr;</p>
       </button>
     </a>
@@ -34,10 +34,15 @@ export default {
   data() {
     return {
 
-      active: false,
+      isActive: false,
 
       personal: ['가입증명서<br>발급', '가입내역<br>조회', '보험료<br>결정내역 조회', '연금산정용가입<br>내역확인서 발급', '연금 / 일시금<br>청구', '전화번호 /<br>이메일 변경'],
       business: ['국민연금 EDI', '보험료 부과내역<br>증명서 발급', '사업장 가입자<br>증명서 발급', '사업장 보험료<br>지원내역 조회', '사업장 관리번호<br>조회', '사업장 가입자<br>명부 조회']
+    }
+  },
+  methods: {
+    activate() {
+      this.isActive = !this.isActive
     }
   }
 }
