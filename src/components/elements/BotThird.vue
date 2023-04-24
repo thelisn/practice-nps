@@ -404,4 +404,89 @@ export default {
     }
   }
 }
+
+@media screen and (max-width:768px) {
+  .wrap {
+
+    .webnews_wrap {
+      height: 250px;
+
+      h2 {
+        font-size: 2.2em;
+      }
+
+      p {
+        padding: 15px;
+        // font-size: 1.4em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .btn_wrap {
+        width: 120px;
+        background-color: pink;
+
+        .go {
+          width: 120px;
+
+          p {
+            background: yellow;
+          }
+        }
+
+        .subs {
+          width: 120px;
+        }
+      }
+    }
+
+    .webnews_wrap:nth-child(2) {
+      margin-right: 0px;
+      // background-color: yellow;
+    }
+
+    .qrcode_wrap {
+      .img_box {
+        width: 250px;
+        // background-color: pink;
+
+        div {
+          width: 115px;
+          height: 115px;
+        }
+
+        .android {
+
+          img {
+            margin-top: 17px;
+            width: 80px;
+          }
+        }
+
+        .ios {
+          img {
+            width: 80px;
+            margin-top: 17px;
+          }
+        }
+      }
+
+      .txt_box {
+        width: 250px;
+        margin-top: 10px;
+
+        .android_txt {
+          width: 115px;
+          font-size: 2em;
+        }
+
+        .ios_txt {
+          width: 115px;
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
 </style>

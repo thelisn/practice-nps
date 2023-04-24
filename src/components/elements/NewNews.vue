@@ -12,12 +12,12 @@
       <a href="#">
       <div 
         class="cont" 
-        :v-for="(contIndex, cont) in list" 
+        v-for="(cont, contIndex) in list" 
         :key="`contIndex-${contIndex}`"
       >
         <div 
           class="data-repeat" 
-          :v-for="(contDataIndex, contData) in cont.data" 
+          v-for="(contData, contDataIndex) in cont.data" 
           :key="`contDataIndex-${contDataIndex}`"
         >
           <h3 class="title">{{ contData.title }}</h3>
@@ -45,9 +45,14 @@ export default {
           listCategory: '새소식',
           data: [
             {
+              title: '국민연금 각종 신고 업무 핸드폰으로 쉽고 빠르게 하세요!',
+              date: '2023-04-21',
+              newCheck: false,
+            },
+            {
               title: '국민연금공단 세종사옥 신규 임대 안내',
               date: '2023-04-20',
-              newCheck: true,
+              newCheck: false,
             },
             {
               title: '국민연금공단 사칭 문자(스미싱) 주의 안내',
@@ -65,7 +70,7 @@ export default {
               newCheck: false,
             },
             {
-              title: '2022년 제1차 국민연금 토론방 토론우수자 선정 및 기념품 당...',
+              title: '2022년 제1차 국민연금 토론방 토론우수자 선정 및 기념품 당첨자 결과 안내',
               date: '2023-02-27',
               newCheck: false,
             }
@@ -74,55 +79,63 @@ export default {
 
         {
           listCategory: '보도자료',
-          data: [{
-            title: '[보도자료] 국민연금, 동반성장 평가 2년 연속 "최우수" 등급...',
-            date: '2023-04-21',
-            newCheck: true,
-          },
-          {
-            title: '[보도자료] 국민연금공단, "공공데이터 제공 운영실태 평가" 4...',
-            date: '2023-04-20',
-            newCheck: true,
-          },
-          {
-            title: '[보도자료] BNY멜론 자산운용그룹, 전주사무소 개소...국민연금...',
-            date: '2023-04-19',
-            newCheck: true,
-          },
-          {
-            title: '[보도자료] 국민연금/한국은행 350억달러 외환 스왑 한도 합의',
-            date: '2023-04-13'
-          }
+          data: [
+            {
+              title: '[보도자료] 국민연금 노후준비 종합포털에서 별정우체국연금 조회도 가능해진다',
+              date: '2023-04-21',
+              newCheck: false,
+            },
+            {
+              title: '[보도자료] 국민연금, 동반성장 평가 2년 연속 "최우수" 등급 달성!',
+              date: '2023-04-21',
+              newCheck: false,
+            },
+            {
+              title: '[공동 보도설명자료] 4.19.(수) 연합뉴스 "이슈IN" 연 2천만원 공적연금 피부영자 탈락 보도 관련',
+              date: '2023-04-20',
+              newCheck: false,
+            },
+            {
+              title: '[보도자료] 국민연금공단, "공공데이터 제공 운영실태 평가" 4년 연속 최고 등급인 "우수" 획득',
+              date: '2023-04-20',
+              newCheck: false,
+            },
+            {
+              title: '[보도자료] BNY멜론 자산운용그룹, 전주사무소 개소 - 국민연금 업무 지원',
+              date: '2023-04-19',
+              newCheck: false,
+            }
           ]
         }, // 보도자료
 
         {
           listCategory: '채용공고',
-          data: [{
-            title: '국민연금공단 공무직(사서직) 및 기간제 근로자(기록연구직, 고객...',
-            date: '2023-04-12',
-            newCheck: false,
-          },
-          {
-            title: '[국민연금공단 대구지역본부] 공무직(환경관리직) 공개 채용',
-            date: '2023-04-10',
-            newCheck: false,
-          },
-          {
-            title: '[국민연금공단 경인지역본부] 공무직(시설직) 공개채용',
-            date: '2023-04-10',
-            newCheck: false,
-          },
-          {
-            title: '[국민연금공단 대전세종지역본부] 공무직(환경관리직, 시설직) 공개...',
-            date: '2023-04-06',
-            newCheck: false,
-          },
-          {
-            title: '[국민연금공단 부산지역본부] 공무직(시설직) 공개채용 공고',
-            date: '2023-04-06',
-            newCheck: false,
-          }
+          data: [
+            {
+              title: '국민연금공단 체험형 청년인턴 추가 채용 공고',
+              date: '2023-04-24',
+              newCheck: true,
+            },
+            {
+              title: '[국민연금공단 광주지역본부] 2023년도 공무직(보안직) 공개채용 공고',
+              date: '2023-04-24',
+              newCheck: true,
+            },
+            {
+              title: '국민연금공단 공무직(사서직) 및 기간제 근로자(기록연구직, 고객센터상담직) 공개채용 공고',
+              date: '2023-04-12',
+              newCheck: false,
+            },
+            {
+              title: '[국민연금공단 대구지역본부] 공무직(환경관리직) 공개 채용',
+              date: '2023-04-10',
+              newCheck: false,
+            },
+            {
+              title: '[국민연금공단 경인지역본부] 공무직(시설직) 공개채용',
+              date: '2023-04-10',
+              newCheck: false,
+            }
           ]
         }, // 채용공고
 
@@ -130,9 +143,9 @@ export default {
           listCategory: '입찰공고',
           data: [
             {
-              title: '2023년도 청풍리조트 전기안전관리자 위탁성주 용역 계약(재공고...',
+              title: '2023년도 청풍리조트 전기안전관리자 위탁상주 용역 계약(재공고)',
               date: '2023-04-20',
-              newCheck: true,
+              newCheck: false,
             },
             {
               title: '2023년 청풍리조트 사업장 생활계폐기물 처리 용역 단가 계약',
@@ -252,13 +265,19 @@ export default {
       position: relative;
 
       h3 {
+        display: -webkit-box;
         font-size: 2em;
         font-weight: bold;
-        width: 220px;
-        height: 90px;
+        width: 230px;
+        height: 83px;
+        line-height: 30px;
         padding: 20px;
-        display: inline-block;
         // background: yellow;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
 
       .newCheck {
@@ -266,6 +285,8 @@ export default {
         font-weight: bold;
         position: absolute;
         padding: 20px;
+        line-height: 30px;
+        top: 0;
         right: 0;
         display: inline-block;
         // background-color: #20aa20;
