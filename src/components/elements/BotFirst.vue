@@ -92,7 +92,8 @@ export default {
             padding: 21px;
             color: #6a6a6a;
             font-size: 2em;
-            font-weight: 700;
+            font-family: 'NanumSquareBold';
+            // font-weight: 700;
           }
             
           .btn {
@@ -119,6 +120,7 @@ export default {
         display: inline-block;
         padding: 25px;
         font-size: 2.6em;
+        font-family: 'NanumSquareExtraBold';
         // background-color: yellow;
         // color: #000;
       }
@@ -146,7 +148,7 @@ export default {
 
       .onair_list {
         margin-top: 20px;
-        font-weight: 100;
+        // font-weight: 100;
         // background: pink;
 
         li {

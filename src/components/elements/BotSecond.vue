@@ -43,6 +43,7 @@
       margin-top: 30px;
       margin-bottom: 20px;
       font-size: 2.6em;
+      font-family: 'NanumSquareExtraBold';
       text-align: center;
       // padding: 40px;
       // background: yellow;
@@ -64,9 +65,7 @@
     .desc {
       margin-top: 30px;
       font-size: 1.8em;
-      font-family: 'NanumBarunGothicLight';
       text-align: center;
-      //!!!!!! 폰트 수정
       // padding: 40px;
       // background: yellow;
     }
@@ -82,6 +81,7 @@
       margin-top: 30px;
       margin-bottom: 20px;
       font-size: 2.6em;
+      font-family: 'NanumSquareExtraBold';
       text-align: center;
     }
 

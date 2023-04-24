@@ -200,7 +200,8 @@ export default {
         color: #777;
 
         &:hover {
-          font-weight: 500;
+          font-family: 'NanumSquareBold';
+          // font-weight: 500;
           // border-bottom: 1px solid #777;
           // color: #000;
         }
@@ -222,7 +223,7 @@ export default {
 
       .lang_list {
         background: white;
-        font-size: 1.7em;
+        font-size: 1.5em;
         color: #777;
         box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
         // display: none;
@@ -235,7 +236,6 @@ export default {
 
           &:hover {
             color: #7494ce;
-            font-weight: 600;
           }
         }
       }
@@ -302,13 +302,14 @@ export default {
           >a {
             display: inline-block;
             // width: calc(90% / 6);
-            font-size: 2.2em;
+            font-size: 2.1em;
             color: #6a6a6a;
-            font-weight: bold;
+            font-family: 'NanumSquareExtraBold';
             line-height: 58px;
             text-align: center;
             // background: yellow;
             // opacity: .7;
+            // font-weight: bold;
             
             &:hover {
             color: #5b7dbb;
@@ -335,11 +336,12 @@ export default {
               display: block;
             }
             
-            a{
+            a {
               display: block;
               color:#6a6a6a;
               font-size: 1.9em;
-              font-weight: 500;
+              font-family: 'NanumSquareBold';
+              // font-weight: 500;
               line-height: 58px;
               text-align: center;
               // width: calc(90% / 6);
@@ -356,7 +358,8 @@ export default {
         position: absolute;
         right: 20px;
         font-size: 2.2em;
-        font-weight: bold;
+        font-family: 'NanumSquareExtraBold';
+        // font-weight: bold;
         // background-color: pink;
         
         a {

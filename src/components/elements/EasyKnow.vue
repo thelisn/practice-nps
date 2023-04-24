@@ -88,7 +88,8 @@ export default {
     h2 {
       color: #ef681e;
       font-size: 2.6em;
-      font-weight: bold;
+      font-family: 'NanumSquareExtraBold';
+      // font-weight: bold;
     }
 
     .easy_innerwrap {
@@ -129,7 +130,8 @@ export default {
 
           &:hover p {
             color: #ef681e;
-            font-weight: 700;
+            font-family: 'NanumSquareBold';
+            // font-weight: 700;
           }
 
           .img_box {
@@ -146,8 +148,9 @@ export default {
             margin-top: 23px;
             color: #6a6a6a;
             font-size: 1.6em;
-            font-weight: 500;
+            font-family: 'NanumSquareBold';
             text-align: center;
+            // font-weight: 500;
           }
         }
 

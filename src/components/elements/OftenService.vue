@@ -49,19 +49,20 @@ export default {
   .service_wrap {
     position: relative;
     margin-top: 30px;
-    // margin-right: 0px;
     margin-left: 600px;
     width: 500px;
     height: 350px;
     border-radius: 30px;
     background: whitesmoke;
     // z-index: -99;
+    // margin-right: 0px;
     // margin-left: 30px;
     
     h2 {
       padding: 40px;
       font-size: 2.6em;
-      font-weight: bold;
+      font-family: 'NanumSquareExtraBold';
+      // font-weight: bold;
       // background: pink;
     }
     
@@ -105,9 +106,10 @@ export default {
         .title {
           padding: 10px;
           color: #6a6a6a;
-          font-size:1.6em;
-          font-weight: 600;
+          font-size:1.7em;
+          font-family: 'NanumSquareBold';
           line-height: 17px;
+          // font-weight: 600;
           // background: pink;
         }
       
@@ -119,9 +121,9 @@ export default {
           height: 30px;
           border-radius: 15px;
           background: #eee;
-          color: #6a6a6a;
-          font-size: 1.2em;
-          font-weight: 800;
+          // color: #6a6a6a;
+          // font-size: 1.2em;
+          // font-weight: 800;
 
           img {
             margin: 0 auto;

@@ -71,7 +71,8 @@ export default {
       padding: 30px;
       color: #158799;
       font-size: 2.6em;
-      font-weight: bold;
+      font-family: 'NanumSquareExtraBold';
+      // font-weight: bold;
     }
     
     a {
@@ -91,9 +92,10 @@ export default {
           margin-top: 20%;
           color: #158799;
           font-size: 1.5em;
-          font-weight: 500;
+          font-family: 'NanumSquareBold';
           text-align: center;
           line-height: 20px;
+          // font-weight: 500;
         }
         
         &:hover {
@@ -163,13 +165,16 @@ export default {
       background:#ffe5d1;
       
       h2 {
+        white-space: nowrap;
         position: relative;
         top: 50%;
         padding: 40px;
         color: #d66000;
         font-size: 2.6em;
-        font-weight: bold;
+        font-family: 'NanumSquareExtraBold';
         transform: translateY(-50%);
+        // background-color: pink;
+        // font-weight: bold;
       }
       
       a {
@@ -230,9 +235,10 @@ export default {
           margin-top: 20%;
           color: #d66000;
           font-size: 1.5em;
-          font-weight: 500;
+          font-family: 'NanumSquareBold';
           line-height: 20px;
           text-align: center;
+          // font-weight: 500;
         }
         
         &:hover {

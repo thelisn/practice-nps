@@ -98,9 +98,10 @@ export default {
 
     h2 {
       font-size: 2.6em;
-      font-weight: bold;
+      font-family: 'NanumSquareExtraBold';
       transform: translateY(-250px);
       // color: #000;
+      // font-weight: bold;
     }
 
     .sns_innerwrap {
@@ -148,7 +149,8 @@ export default {
               .title {
                 margin-bottom: 15px;
                 font-size: 3.4em;
-                font-weight: 600;
+                font-family: 'NanumSquareExtraBold';
+                // font-weight: 600;
               }
 
               .desc {

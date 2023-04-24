@@ -66,9 +66,10 @@ export default {
       background: #d5e3fb;
       color: #3e65c9;
       font-size: 1.6em;
-      font-weight: bold;
+      font-family: 'NanumSquareExtraBold';
       transform: translateY(15px);
       // display: none;
+      // font-weight: bold;
     }
 
     p:nth-child(1) {
@@ -83,7 +84,8 @@ export default {
       
       a {
         color: #6a6a6a;
-      font-size: 1.6em;
+        font-size: 1.6em;
+        transition: .2s;
 
       &:hover {
         color: #000;
@@ -113,6 +115,7 @@ export default {
     background: gray;
     color: #fff;
     font-size: 1.6em;
+    font-family: 'NanumSquareBold';
     text-align: center;
     transform: translateX(-50%);
     transition: .3s;
@@ -137,7 +140,8 @@ export default {
     p {
       color: #fff;
       font-size: .9em;
-      font-weight: bold;
+      font-family: 'NanumSquareBold';
+      // font-weight: bold;
     }
   }
 }

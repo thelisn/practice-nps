@@ -86,6 +86,7 @@ export default {
     h2 {
       margin-top: 30px;
       font-size: 2.6em;
+      font-family: 'NanumSquareExtraBold';
       text-align: center;
     }
 
@@ -93,7 +94,6 @@ export default {
       margin-top: 10px;
       margin-bottom: 10px;
       font-size: 1.6em;
-      font-family: 'NanumBarunGothic';
       text-align: center;
     }
     
@@ -172,6 +172,7 @@ export default {
     h2 {
       margin-top: 30px;
       font-size: 2.6em;
+      font-family: 'NanumSquareExtraBold';
       text-align: center;
     }
 
@@ -425,18 +426,26 @@ export default {
 
       .btn_wrap {
         width: 120px;
-        background-color: pink;
+        // height: 100px;
+        // background-color: pink;
 
         .go {
           width: 120px;
 
           p {
-            background: yellow;
+            transform: translateY(-53px);
+            // background: yellow;
           }
         }
 
         .subs {
+          margin-left: 0px;
           width: 120px;
+          transform: translateY(-30px);
+
+          p {
+            transform: translateY(-53px);
+          }
         }
       }
     }

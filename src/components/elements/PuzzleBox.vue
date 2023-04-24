@@ -64,7 +64,8 @@ export default {
       padding: 30px;
       color: #fff;
       font-size: 2.6em;
-      font-weight: bold;
+      font-family: 'NanumSquareExtraBold';
+      // font-weight: bold;
     }
 
     .desc {
@@ -74,7 +75,8 @@ export default {
         margin-left: 60px;
         color: #fff;
         font-size: 1.8em;
-        font-weight: 400;
+        // font-family: 'NanumSquareBold';
+        // font-weight: 400;
         // background: yellow;
         // line-height: 35px;
         // cursor: pointer;

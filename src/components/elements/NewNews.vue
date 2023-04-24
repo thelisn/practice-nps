@@ -3,7 +3,8 @@
     <div class="listbtn_wrap">
       <ul class="listbtn">
         <a href="#" onclick="return false">
-          <li v-for="list in list" :key="list">{{ list.listCategory }}</li>
+          <!-- onclick="return false"는 a태그 클릭 시 맨 위로 올라가는 기능 금지시키는 거 -->
+          <button v-for="list in list" :key="list">{{ list.listCategory }}</button>
         </a>
       </ul>
     </div>
@@ -179,10 +180,10 @@ export default {
 .wrap {
   position: relative;
   top: 300px;
-  // background: pink;
   width: 1100px;
   height: 220px;
   margin: 0 auto;
+  // background: pink;
 
   .listbtn_wrap {
     width: 400px;
@@ -192,53 +193,68 @@ export default {
 
     .listbtn {
 
-      // width: 100px;
-      // height: 100px;
-      // background-color: ivory;
-      // display: inline-block;
       a {
-        li {
+    
+        button {
           display: inline-block;
           width: 100px;
           height: 50px;
           border-radius: 25px;
-          font-size: 1.6em; // font-family: 'NanumBarunGothic';
+          font-size: 1.6em;
+          font-family: 'NanumSquareExtraBold';
           text-align: center;
           line-height: 55px;
+          color: #585858;
+          transition: .2s;
           cursor: pointer;
-          transition: .2s; // margin-right: 20px;
-
           // background-color: yellow;
+
           &:hover {
             color: #fff;
           }
         }
 
-        li:nth-child(1) {
+        button:nth-child(1) {
           &:hover {
             background: #ef681e;
           }
+          &:focus {
+            background: #ef681e;
+            color: #fff;
+          }
         }
 
-        li:nth-child(2) {
+        button:nth-child(2) {
           &:hover {
             background: #6992dd;
           }
+          &:focus {
+            background: #6992dd;
+            color: #fff;
+          }
         }
 
-        li:nth-child(3) {
+        button:nth-child(3) {
           &:hover {
             background: #20aa20;
           }
-        }
-
-        li:nth-child(4) {
-          &:hover {
-            background: #ea558b;
+          &:focus {
+            background: #20aa20;
+            color: #fff;
           }
         }
 
-        li:nth-child(4) {
+        button:nth-child(4) {
+          &:hover {
+            background: #ea558b;
+          }
+          &:focus {
+            background: #ea558b;
+            color: #fff;
+          }
+        }
+
+        button:nth-child(4) {
           margin-right: 0px;
         }
       }
@@ -246,57 +262,62 @@ export default {
   } // listbtn_wrap
 
   .cont_wrap {
-    margin-top: 20px;
-    width: 100%;
-    // background: #ddd;
-    height: 150px;
     overflow: hidden;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    // background: #ddd;
 
     .cont {
-      border-radius: 20px;
-      border: 1px solid #000;
-      background: #eee;
-      // display: inline-block;
+      position: relative;
       float: left;
       width: calc(100% / 3 - 20px);
       height: 100%;
-      // background: beige;
       margin-right: 30px;
-      position: relative;
+      border-radius: 20px;
+      background: #f8f8f8;
+      // border: 0.7px solid #ef681e;
+      // background: beige;
 
       h3 {
         display: -webkit-box;
-        font-size: 2em;
-        font-weight: bold;
+        overflow: hidden;
+        padding: 20px;
         width: 230px;
         height: 83px;
+        color: #585858;
+        font-size: 2em;
+        font-family: 'NanumSquareBold';
         line-height: 30px;
-        padding: 20px;
-        // background: yellow;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         word-break: break-all;
         text-overflow: ellipsis;
-        overflow: hidden;
+        // background: yellow;
+        // font-weight: bold;
       }
 
       .newCheck {
-        font-size: 2em;
-        font-weight: bold;
+        display: inline-block;
         position: absolute;
-        padding: 20px;
-        line-height: 30px;
         top: 0;
         right: 0;
-        display: inline-block;
+        padding: 20px;
+        color: #ef681e;
+        font-size: 2em;
+        font-family: 'NanumSquareExtraBold';
+        line-height: 30px;
+        // font-weight: bold;
         // background-color: #20aa20;
       }
 
       .date {
-        font-size: 1.6em;
-        margin-top: 2px;
         padding: 20px;
+        margin-top: 2px;
+        color: #585858;
+        font-size: 1.6em;
         // background: palegreen;
+        // font-weight: 300;
       }
     }
 
@@ -309,7 +330,58 @@ export default {
 @media screen and (max-width:1200px) {
   .wrap {
     top: 450px;
-    width: 100%;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:950px) {
+  .wrap {
+    
+    .listbtn_wrap {
+      width: 300px;
+      height: 40px;
+
+      .listbtn {
+
+        a {
+
+          button {
+            width: 75px;
+            height: 40px;
+            font-size: 1.4em;
+            line-height: 43px;
+            // background-color: pink;
+          }
+        }
+      }
+    }
+
+    .cont_wrap {
+      // background-color: pink;
+
+      .cont {
+        // margin-right: 20px;
+        
+        h3 {
+          width: 130px;
+          height: 75px;
+          padding: 10px;
+          font-size: 1.6em;
+          line-height: 23px;
+          -webkit-line-clamp: 3;
+        }
+
+        .newCheck {
+          display: none;
+        }
+
+        .date {
+          padding: 10px;
+          margin-top: 35px;
+          font-size: 1.3em;
+        }
+      }
+    }
   }
 }
 </style>

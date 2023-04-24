@@ -71,9 +71,10 @@ export default {
       padding: 40px;
       color: #6a6a6a;
       font-size: 3.8em;
-      font-weight: bold;
+      font-family: 'NanumSquareExtraBold';
       line-height: 44px;
       // background-color: pink;
+      // font-weight: bold;
     }
 
     .desc {
@@ -93,7 +94,8 @@ export default {
       background: #fff;
       color: #6a6a6a;
       font-size: 2em;
-      font-weight: bold;
+      font-family: 'NanumSquareBold';
+      // font-weight: bold;
       text-align: center;
       line-height: 50px;
     }

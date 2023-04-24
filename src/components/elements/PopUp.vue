@@ -69,7 +69,8 @@ export default {
 
     h2 {
       font-size: 2.6em;
-      font-weight: bold;
+      font-family: 'NanumSquareExtraBold';
+      // font-weight: bold;
     }
 
     .popup_cont {
@@ -89,8 +90,9 @@ export default {
             padding: 34px;
             color: #6a6a6a;
             font-size: 3em;
-            font-weight: bold;
+            font-family: 'NanumSquareExtraBold';
             line-height: 32px;
+            // font-weight: bold;
           }
 
           .desc {

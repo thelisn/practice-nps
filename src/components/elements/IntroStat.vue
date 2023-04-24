@@ -89,7 +89,8 @@ export default {
     h2 {
       color: #6992dd;
       font-size: 2.6em;
-      font-weight: bold;
+      font-family: 'NanumSquareExtraBold';
+      // font-weight: bold;
       // padding: 20px;
       // background: beige;
     }
@@ -135,7 +136,8 @@ export default {
 
           &:hover p {
             color: #517ed3;
-            font-weight: 700;
+            font-family: 'NanumSquareBold';
+            // font-weight: 700;
           }
 
           .img_box {
@@ -152,8 +154,9 @@ export default {
             margin-top: 23px;
             color: #6a6a6a;
             font-size: 1.6em;
-            font-weight: 500;
+            font-family: 'NanumSquareBold';
             text-align: center;
+            // font-weight: 500;
           }
         }
         
@@ -248,6 +251,7 @@ export default {
             p {
               margin-top: 22px;
               font-size: 1.5em;
+              white-space: nowrap;
             }
           }
         }
