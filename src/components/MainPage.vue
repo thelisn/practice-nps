@@ -18,8 +18,7 @@
     <BotFirst />
     <BotSecond />
     <BotThird />
-    <br>
-    <br>
+    <MyFooter />
     <!-- <MyHistory /> -->
     
   </div>
@@ -40,6 +39,7 @@ import PuzzleBox from './elements/PuzzleBox.vue';
 import BotFirst from './elements/BotFirst.vue';
 import BotSecond from './elements/BotSecond.vue';
 import BotThird from './elements/BotThird.vue';
+import MyFooter from './MyFooter.vue'
 // import MyHistory from './MyHistory.vue';
 
 export default {
@@ -58,6 +58,7 @@ export default {
     BotFirst,
     BotSecond,
     BotThird,
+    MyFooter,
     // MyHistory
   }
 }
